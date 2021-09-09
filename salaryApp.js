@@ -155,13 +155,13 @@ const displayLastItemDialog = function (lastItem) {
 };
 
 var showDataError = function (name, salary) {
-  const dlg = document.getElementById("#dialog-error");
+  const dlg = document.getElementById("dialog-error");
   dlg.classList.remove("hide");
 
-  toggleErrorMessage("#newName", name, "Who the hell you are talking about!");
-  toggleErrorMessage("#newSalary", salary, "How much that guy make!");
+  toggleErrorMessage("newName", name, "Who the hell you are talking about!");
+  toggleErrorMessage("newSalary", salary, "How much that guy make!");
 
-  dlg.dialog({
+  $('#dialog-error').dialog({
     width: 600,
     buttons: {
       Ok: function () {
@@ -173,9 +173,9 @@ var showDataError = function (name, salary) {
 
 function toggleErrorMessage(selector, value, msg) {
   if (value) {
-    document.getElementById(selector + "line").style.display = "none";
+    document.getElementById(selector + "Line").style.display = "none";
   } else {
-    document.getElementById(selector + "line").style.display = "block";
+    document.getElementById(selector + "Line").style.display = "block";
     document.getElementById(selector).innerText = msg;
   }
 }
