@@ -145,7 +145,8 @@ const displayLastItemDialog = function (lastItem) {
   document.getElementById("showSalary").innerText = d3.format(",.0f")(
     lastItem.salary
   );
-  dlg.dialog({
+  $('#dialog-last-item').dialog({
+    width: 600,
     buttons: {
       Ok: function () {
         $(this).dialog("close");
@@ -187,7 +188,7 @@ const showRecordCount = function (data) {
 
   document.getElementById("numberOfRecords").innerText = data.length;
 
-  dlg.dialog({
+  $('#dialog-record-count').dialog({
     buttons: {
       Ok: function () {
         $(this).dialog("close");
